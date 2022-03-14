@@ -1,2 +1,27 @@
 // user.scss
 // Place your own theme CSS or SCSS rules below this line, these rules will override any Bootstrap and theme variables.
+
+.page {
+    max-width: 1520px;
+    width: 100%;
+    padding: 0;
+
+    position: relative;
+
+    font-family: $font_family;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.background-shape {
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+
+}
+
