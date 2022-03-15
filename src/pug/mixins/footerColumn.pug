@@ -1,0 +1,6 @@
+mixin footerColumn(other, columnTitle, navClasses, listClasses, linksArr)
+    p.font-weight-bold=columnTitle
+        if(other)
+            block 
+        else
+            +nav(navClasses, listClasses, linksArr)

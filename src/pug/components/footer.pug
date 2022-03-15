@@ -1,4 +1,71 @@
+-
+	const forClientsArr = [
+		{
+			classes: 'nav-link p-0',
+			text: "Find Freelancers",
+			target: "_self",
+			href: "#"
+		},
+		{
+			classes: 'nav-link p-0',
+			text: "Post Project",
+			target: "_self",
+			href: "#"
+		},
+		{
+			classes: 'nav-link p-0',
+			text: "Refund Policy",
+			target: "_self",
+			href: "#"
+		},
+		{
+			classes: 'nav-link p-0',
+			text: "Privacy Policy",
+			target: "_self",
+			href: "#"
+		}
+	]
+
+	const forFreelancersArr = [
+		{
+			classes: 'nav-link p-0',
+			text: "Find Work",
+			target: "_self",
+			href: "#"
+		},
+		{
+			classes: 'nav-link p-0',
+			text: "Create Account",
+			target: "_self",
+			href: "#"
+		},
+	]
+
+
+
 footer.footer
-	.container
-		p.text-center
-			| &copy;&nbsp;Подвал
+	.row
+		.col 
+			+logo("footer__logo_container")
+			p Powerful Freelance Marketplace System with ability to change the Users (Freelancers & Clients)
+			+socials
+		.col
+			+footerColumn(false, 'For Clients', "footer__nav", "nav  flex-column", forClientsArr) 
+		.col 
+			+footerColumn(false, 'For Clients', "footer__nav", "nav  flex-column", forClientsArr)
+		.col
+			+footerColumn(true, 'Call Us')
+				ul.list-unstyled
+					li
+						a(class="nav-link d-flex px-0" href="#") 
+							+svg('area')(class="icon")
+							span.mx-2 Kenya
+					li
+						a(class="nav-link d-flex px-0" href="tel:+25470000000") 
+							+svg('phone')(class="icon")
+							span.mx-2 +25470000000
+					li
+						a(class="nav-link d-flex px-0" href="mailto:bluelance@gmail.com") 
+							+svg('email')(class="icon")
+							span.mx-2 bluelance@gmail.com
+

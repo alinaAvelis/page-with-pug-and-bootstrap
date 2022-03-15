@@ -49,8 +49,15 @@
     }
 }
 
+
 // header
 /*//////////*/
+
+.header {
+    & .nav-link {
+        @include font-size(1.2rem);
+    }
+}
 
 .header__logo_container {
     width: 238px;
@@ -67,5 +74,31 @@
     color: $blue;
     font-weight: 500;
     opacity: 1;
+}
+
+// footer
+/*//////////*/
+
+.footer {
+    @include font-size(0.8rem);
+    
+    & .nav-link {
+        opacity: 1;
+    }
+}
+
+.footer__logo_container {
+    max-width: 100%;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+
+    fill: $gray;
+
+    &:hover {
+        fill: $blue;
+    }
 }
 

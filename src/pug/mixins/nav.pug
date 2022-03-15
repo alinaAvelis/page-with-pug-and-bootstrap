@@ -1,0 +1,6 @@
+mixin nav(navClasses, listClasses, linksArr)
+    nav(class=navClasses)
+        ul(class=listClasses)
+            each current in linksArr
+                li
+                    a(class=current.classes aria-current=current.ariaCurrent href=current.href  target=current.target)!=current.text
