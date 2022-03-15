@@ -1,14 +1,49 @@
 main.home
-	section
-		.container-fluid
-			.row
-				.col-8
-					h1 Are you looking for Freelancers?
-					p Hire Great Freelancers, Fast. Spacelance helps you hire elite freelancers at a moment's notice
-					div(class='btn-group' role="group")
-						button
-						button
+	section(class="section--mt_small  search_freelancers  container-fluid")
+		.row
+			div(class="col-6")
+				h1.page_title Are you looking for Freelancers?
+				p.big_gray_text Hire Great Freelancers, Fast. Spacelance helps you hire elite freelancers at a moment's notice
+				.container
+					div(class="row d-flex  justify-content-between flex-wrap btns_container")
+						+blueButton("Hire a freelancer")(type="button" class="rounded-lg  btn-primary--big_padding col-4")
+						+searchInput(class="d-block  col-8")
+	-
+		const serviceCard = [
+			{
+				iconUrl: "images/service_1.png",
+				titleText: "Create Account",
+				text: "First you have to create a account  here"
+			},
+			{
+				iconUrl: "images/service_2.png",
+				titleText: "Search work",
+				text: "Search the best freelance work here"
+			},
+			{
+				iconUrl: "images/service_3.png",
+				titleText: "Save and apply",
+				text: "Apply or save and start your work"
+			}
+		]
+	
+	section(class="section--mt_big services  container  bg-white  rounded")
+		.row
+			+serviceCard(serviceCard)
 
+	section(class="section--mt_big about_us  container position-relative")
+		div(class="row  d-flex")
+			.col-8
+				+statisticalBlock("500+", "freelancers")("about_us__statistical")
+				+statisticalBlock("300+", "freelance work Posted")("about_us__statistical")
+
+			- const blueSpan = "<span class='text-primary'>Freelancers</span>"
+			.col-4
+				h2.subtitle. 
+					Find The Best !{blueSpan} Here 
+				p(class="big_gray_text  text-left").
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat bibendum ornare urna, cursus eget convallis. Feugiat imperdiet posuere justo, ultrices interdum sed orci nunc, mattis. Ipsum viverra viverra neque adipiscing arcu, quam dictum. Dui mi viverra dui, sit accumsan, tincidunt massa. Dui cras magnis.
+			
 
 			
 		

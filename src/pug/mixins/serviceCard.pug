@@ -1,0 +1,9 @@
+mixin serviceCard(arr)
+    each item in arr
+         div(class="col-sm serviceCard  my-5")
+            div(class="d-flex  flex-column  align-items-center  text-center")
+                div(class="service_card__blue_circle rounded-circle  d-flex  align-items-center")
+                    div(class="service_icon  mx-auto")
+                        img(class="img-fluid  align-middle" src=item.iconUrl)
+                p(class="service_card_text mb-0")=item.titleText
+                p(class="big_gray_text mb-0")=item.text
