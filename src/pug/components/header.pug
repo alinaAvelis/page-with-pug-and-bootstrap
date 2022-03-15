@@ -1,3 +1,43 @@
-header.header
-	.container
-		| Шапка
+header(class=['header', 'bg-white', "py-3", "px-5", 'rounded-pill'])
+	div(class="row  d-flex  align-items-center  justify-content-between")
+		.col-xl-4
+			.header__logo_container 
+				img(class="img-fluid" src="images/header/logo.svg" alt="" )
+		.col-xl-8
+			- 
+				const navArr = [
+					{
+						classes: ['nav-link', 'active'],
+						text: "Home",
+						ariaCurrent: "page",
+						href: "#"
+					},
+					{
+						classes: ['nav-link'],
+						text: "Find work",
+						href: "#"
+					},
+					{
+						classes: ['nav-link'],
+						text: "Find Freelancers",
+						href: "#"
+					},
+					{
+						classes: ['nav-link'],
+						text: "Log In",
+						href: "#"
+					},
+					{
+						classes: ['nav-link'],
+						text: "Sign Up",
+						href: "#"
+					}
+				]
+
+			.row 
+				nav.col-9
+					ul(class=['nav', 'justify-content-center'])
+						each current in navArr
+								a(class=current.classes aria-current=current.ariaCurrent href=current.href)=current.text
+				button(class="col-3  btn  btn-primary  rounded-pill"  type="button") Post a project
+			

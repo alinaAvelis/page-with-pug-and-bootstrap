@@ -7,9 +7,10 @@ append vars
 	//-
 
 block content
-	.div(class=['container-fluid', "page"])
-		include pug/components/header
+	div(class=['container', "page", "pt-5"])
+		.page_container
+			include pug/components/header
 
-		include pug/pages/home
+			include pug/pages/home
 
-		include pug/components/footer
+			include pug/components/footer

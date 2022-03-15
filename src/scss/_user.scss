@@ -1,14 +1,26 @@
 // user.scss
 // Place your own theme CSS or SCSS rules below this line, these rules will override any Bootstrap and theme variables.
 
+// main
+/*//////////*/
+
 .page {
-    max-width: 1520px;
-    width: 100%;
+    // max-width: 1520px;
+    // width: 100%;
     padding: 0;
 
-    position: relative;
-
     font-family: $font_family;
+
+    background-image: url("../images/back-figure.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.page_container {
+    max-width: 1295px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .pos-relative {
@@ -22,6 +34,38 @@
     top: 0;
     z-index: -1;
 
+}
 
+.img-fluid {
+    display: inline-block !important;
+}
+
+.btn-primary {
+    color: white;
+    font-weight: 600;
+
+    &:hover {
+        color: white;
+    }
+}
+
+// header
+/*//////////*/
+
+.header__logo_container {
+    width: 238px;
+}
+
+.nav-link {
+    font: inherit;
+    color: $gray;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+ .active {
+    color: $blue;
+    font-weight: 500;
+    opacity: 1;
 }
 
