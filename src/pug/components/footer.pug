@@ -44,28 +44,29 @@
 
 
 footer.footer
-	.row
-		.col 
+	div(class="row  d-flex  justify-content-between")
+		.col-3
 			+logo("footer__logo_container")
 			p Powerful Freelance Marketplace System with ability to change the Users (Freelancers & Clients)
 			+socials
-		.col
+		.col-2
 			+footerColumn(false, 'For Clients', "footer__nav", "nav  flex-column", forClientsArr) 
-		.col 
+		.col-2
 			+footerColumn(false, 'For Clients', "footer__nav", "nav  flex-column", forClientsArr)
-		.col
+		.col-3
 			+footerColumn(true, 'Call Us')
 				ul.list-unstyled
 					li
-						a(class="nav-link d-flex px-0" href="#") 
+						a(class="nav-link d-flex px-0 pb-3" href="#") 
 							+svg('area')(class="icon")
 							span.mx-2 Kenya
 					li
-						a(class="nav-link d-flex px-0" href="tel:+25470000000") 
+						a(class="nav-link d-flex px-0 pb-3" href="tel:+25470000000") 
 							+svg('phone')(class="icon")
 							span.mx-2 +25470000000
 					li
-						a(class="nav-link d-flex px-0" href="mailto:bluelance@gmail.com") 
+						a(class="nav-link d-flex px-0 pb-3" href="mailto:bluelance@gmail.com") 
 							+svg('email')(class="icon")
 							span.mx-2 bluelance@gmail.com
-
+	div(class="container  text-center footer-note")
+		p 2022 Spacelance. All right reserved

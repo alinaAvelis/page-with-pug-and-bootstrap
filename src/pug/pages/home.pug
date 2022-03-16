@@ -1,11 +1,11 @@
 main.home
 	section(class="section--mt_small  search_freelancers  container-fluid")
 		.row
-			div(class="col-6")
+			div(class="col-lg-6")
 				h1.page_title Are you looking for Freelancers?
 				p.big_gray_text Hire Great Freelancers, Fast. Spacelance helps you hire elite freelancers at a moment's notice
 				.container
-					div(class="row d-flex  justify-content-between flex-wrap btns_container")
+					div(class="row d-flex  justify-content-between flex-column  flex-lg-row btns_container")
 						+blueButton("Hire a freelancer")(type="button" class="rounded-lg  btn-primary--big_padding col-4")
 						+searchInput(class="d-block  col-8")
 	-
@@ -32,17 +32,66 @@ main.home
 			+serviceCard(serviceCard)
 
 	section(class="section--mt_big about_us  container position-relative")
-		div(class="row  d-flex")
-			.col-8
-				+statisticalBlock("500+", "freelancers")("about_us__statistical")
-				+statisticalBlock("300+", "freelance work Posted")("about_us__statistical")
+		div(class="row  d-flex  flex-column  flex-lg-row")
+			.col-lg-7
+				+statisticalBlock("500+", "freelancers")(class="about_us__statistical  about_us__statistical--1")
+				+statisticalBlock("300+", "freelance work Posted")(class="about_us__statistical  about_us__statistical--2")
 
 			- const blueSpan = "<span class='text-primary'>Freelancers</span>"
-			.col-4
-				h2.subtitle. 
-					Find The Best !{blueSpan} Here 
-				p(class="big_gray_text  text-left").
+			div(class="col-lg-5 about_us__text")
+				h2(class="subtitle") Find The Best !{blueSpan} Here 
+				p(class="big_gray_text").
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut erat bibendum ornare urna, cursus eget convallis. Feugiat imperdiet posuere justo, ultrices interdum sed orci nunc, mattis. Ipsum viverra viverra neque adipiscing arcu, quam dictum. Dui mi viverra dui, sit accumsan, tincidunt massa. Dui cras magnis.
+	
+
+	- 
+		const works = [
+			{
+				src: "images/works_1.png",
+				alt: "work icon",
+				title: "Logo Design",
+				text: "Need a professional logo with writing underneath for our jewellery company",
+				price: "500",
+				href: "#"
+			},
+			{
+				src: "images/works_2.png",
+				alt: "work icon",
+				title: "Graphic Design",
+				text: "We need a graphic designer with UI/UX skills for our Furniture company",
+				price: "500",
+				href: "#"
+			},
+			{
+				src: "images/works_2.png",
+				alt: "work icon",
+				title: "Need a SEO",
+				text: "Need a SEO for our company who will let our company to a higher leve",
+				price: "300",
+				href: "#"
+			}
+		]
+
+	section(class="section--mt_big recently_works container  bg-white  rounded")
+		div(class="row d-flex  justify-content-between  align-items-center")
+			.col-8 
+				p(class="big_gray_text works_gray_text") The latest freelance work!
+				h2.subtitle Recently Posted 
+					span.text-primary Works
+			div(class="col-2 d-flex  align-items-end")
+				button(class="arrow_bg arrow_bg--white btn  bg-white  rounded-circle  mx-4")
+					div(class="arrow_container")
+						img(class="img-fluid  align-middle" src="images/arrow_prev.svg")
+				button(class="arrow_bg arrow_bg--blue btn  bg-primary  rounded-circle")
+					.arrow_container
+						img(class="img-fluid  align-middle" src="images/arrow.svg")
+
+		.row
+			div(class='container d-flex justify-content-between  align-items-center	mt-5')
+				+resentlyWorksCard(works)
+
+
+			
 			
 
 			

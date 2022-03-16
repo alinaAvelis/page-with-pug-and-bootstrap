@@ -1,2 +1,6 @@
 /* eslint-disable no-console */
-console.log('Hello world');
+// import bootstrap from 'bootstrap';
+
+// let myCarousel = document.querySelector('#carousel');
+// let carousel = new bootstrap.Carousel(myCarousel);
+

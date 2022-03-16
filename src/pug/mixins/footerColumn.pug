@@ -1,5 +1,5 @@
 mixin footerColumn(other, columnTitle, navClasses, listClasses, linksArr)
-    p.font-weight-bold=columnTitle
+    p(class="font-weight-bold footer_column__title")=columnTitle
         if(other)
             block 
         else

@@ -1,0 +1,23 @@
+mixin resentlyWorksCard(arr)
+    each item, i in arr
+        if(arr.length%i === 0) 
+            div(class="card  text-center  card--margin  rounded")
+                .card-body
+                    div(class="card__img_container mx-auto")
+                        img(class="img-fluid" src=item.src, alt=item.alt)
+                    h5.card-title=item.title
+                    p.big_gray_text=item.text
+                        div(class="row d-flex justify-content-between  align-items-center")
+                            span(class="big_gray_text font-weight-bolder w-50") Highest bid $!{item.price}
+                            a(href=item.href class="card-link font-weight-bolder w-50") Apply now
+        else
+            div(class="card  text-center")
+                .card-body
+                    div(class="card__img_container mx-auto")
+                        img(class="img-fluid" src=item.src, alt=item.alt)
+                    h5.card-title=item.title
+                    p.big_gray_text=item.text
+                        div(class="d-flex justify-content-between  align-items-center")
+                            span(class="big_gray_text font-weight-bolder w-50") Highest bid $!{item.price}
+                            a(href=item.href class="card-link  font-weight-bolder  w-50") Apply now
+        
